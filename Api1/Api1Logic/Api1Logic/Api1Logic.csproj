@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api1Model\Api1Model\Api1Model.csproj" />
+    <ProjectReference Include="..\..\..\Common\CommonModel\CommonModel\CommonModel.csproj" />
+    <ProjectReference Include="..\..\..\Common\CommonLogic\CommonLogic\CommonLogic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
