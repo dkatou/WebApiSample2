@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Api1.Api1Model.Models;
 using Api1.Api1Model.Data;
 using Api1.Api1Logic.Logics;
+using System.Linq;
 
 namespace Api1.Api1Logic.Api1LogicsTest
 {
@@ -53,6 +54,13 @@ namespace Api1.Api1Logic.Api1LogicsTest
                 Assert.True(1 == 1);
             }
 
+            using (var context = new Api1Context(_options))
+            {
+                IQueryable<Blog> blog = context.Blog.Where(b => b.BlogId == 1);
+
+
+                var sql = blog.ToSqll();
+            }
         }
     }
 }
